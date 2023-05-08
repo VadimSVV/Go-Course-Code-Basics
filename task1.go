@@ -9,6 +9,14 @@
 //   fmt.Print("Hello, Friend!") // В конце не нужна точка с запятой
 // }
 
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+func main() {
 wg := sync.WaitGroup{}
 
 for i := 0; i < 3; i++ {
@@ -20,3 +28,5 @@ for i := 0; i < 3; i++ {
 }
 
 wg.Wait()
+
+}
